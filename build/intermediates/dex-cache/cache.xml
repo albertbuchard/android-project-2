@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.1_453f489a793d8fa47e72cc47502a0e390ef97e83/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-beta5/constraint-layout-solver-1.0.0-beta5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ff0dad5e4fc720f478ce8b5f6edf76a932d9b886">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.0-beta5_7a7da7a919c5fad9d6118283bafecf86e9539500/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.1_ced567bc908ee2bf18b87794001a1f49744fb3f3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.1_1e265882e1da16906be5ef09692e1ea1d0dccb72/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_17aa3a1d9aa9a2499ea446354b6e9811c5046a41/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.1_7d27d54b72aa8c2ca82d381d4ebd0808d66dc33a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.5/6c6c702c89bfff3cd9e80b04d668c5e190d588c6/commons-lang3-3.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6c6c702c89bfff3cd9e80b04d668c5e190d588c6">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-lang3-3.5_da0013d5741368d9dffdf4f2099e5b3cbc6b330c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.1_e3cf285345b1f0087fccb7955d5953a7b113b6da/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.1_d9e5d85ed356bd3f584361b69eefca18e4eed728/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_b3417d3eaf8b1b1b49ba11a866dbd2f42b7a0f40/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.1_49341518e1d39f63261d42f800851a99d966add6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5c00802328b7d875dfd8545f81eaef3b80f3622d">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a0c93d3ea5b2c6a660a58b0529712cff2bdf5b2b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2020e95d6185aaf1e4589b3072baac80e27dd9a0">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_bbe6387888e802f66060e2f52d3d3d55b5ed0a1e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_b3cbf997be3bb9d5327e2b1d98a38361684ebe69/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.1_b0c35ecb3924bf8f776792ac9787fa7f6ac4fe63/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-beta5/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dce0f3de11781e1ee758cba483871b598c9d4931">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.0-beta5_ec1f039b0417c18e1669521af0ad6df6bb35f431/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.1_9c7aa16e358d4251c1586d58d0cdc53366654c3b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_06c203aaed2b6dd143592e471103a0851ff72d84/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/Users/Pro/AndroidStudioProjects/watts-hut/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.1_13b97c7df8f83b115906b1f7e1f96de0a9bd128a/classes.dex" />
+    </item>
+
+</items>

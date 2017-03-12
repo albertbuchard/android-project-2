@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Watts Hut</string>
+    <string name="image_api_url">http://image.tmdb.org/t/p/%1$s%2$s</string>
+    <string name="movie_api_url">https://api.themoviedb.org/3/discover/movie</string>
+    <string name="movie_api_popular">http://api.themoviedb.org/3/movie/popular</string>
+    <string name="movie_api_top_rate">http://api.themoviedb.org/3/movie/top_rated</string>
+    <string-array name="movie_api_sizes">
+        <item>w185</item>
+        <item>w92</item>
+        <item>w154</item>
+        <item>w342</item>
+        <item>w500</item>
+        <item>w780</item>
+        <item>original</item>
+    </string-array>
+    <string name="Refresh">Refresh</string>
+    <string name="movie_api_key">62e02e921b592cff89545ffbf9442322</string>
+    <string name="movie_api_param_key">api_key</string>
+    <string name="movie_api_param_sort">sort_by</string>
+    <string name="movie_api_param_page">page</string>
+    <string name="movie_api_results_image">poster_path</string>
+    <string name="loading">loading</string>
+    <string name="sort_by_top">Top Rated</string>
+    <string name="sort_by_popular">Popular</string>
+    <string-array name="movie_api_sorting">
+        <item>popularity.asc</item>
+        <item>popularity.desc</item>
+        <item>release_date.asc</item>
+        <item>release_date.desc</item>
+        <item>revenue.asc</item>
+        <item>revenue.desc</item>
+        <item>primary_release_date.asc</item>
+        <item>primary_release_date.desc</item>
+        <item>original_title.asc</item>
+        <item>original_title.desc</item>
+        <item>vote_average.asc</item>
+        <item>vote_average.desc</item>
+        <item>vote_count.asc</item>
+        <item>vote_count.desc</item>
+    </string-array>
+    <string name="title_activity_movie_details">movieDetails</string>
+</resources>

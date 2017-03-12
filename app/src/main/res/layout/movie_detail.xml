@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.pro.watts_hut.MovieDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="@dimen/width_thumbnail"
+                    android:layout_height="@dimen/height_thumbnail"
+                    app:srcCompat="@android:color/transparent"
+                    android:id="@+id/detail_thumbnail"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"  />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/movie_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        tools:text="Very Long Movie Title" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:gravity="top|left"
+                        android:layout_marginTop="20dp"
+                        android:text="Release date"
+                        android:textSize="18sp"
+                        android:fontFamily="casual" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/release_date"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:gravity="top|left"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="15dp"
+                        tools:text="03.02.2014" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:gravity="top|left"
+                        android:layout_marginTop="20dp"
+                        android:text="Ratings"
+                        tools:text="Ratings"
+                        android:textSize="18sp"
+                        android:fontFamily="casual" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratings"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:gravity="top|left"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="15dp"
+                        tools:text="* * * *\n 10 ratings" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:gravity="top|left"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="6dp"
+                android:text="Synopsis"
+                android:padding="6dp"
+                android:fontFamily="casual" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/synopsis"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:gravity="top|left"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="12dp"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis nisl at metus vestibulum, a dapibus diam tempor. Sed a nisl eu justo volutpat ultricies. Maecenas eget velit iaculis, accumsan felis non, porta orci. Etiam odio eros, elementum id congue et, vulputate efficitur neque. Nullam vestibulum metus vel justo sollicitudin, vel volutpat est vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sollicitudin, arcu eu consequat faucibus, massa metus laoreet turpis, et lobortis libero sapien ac magna. Maecenas sodales ultricies mollis. Sed rutrum leo pharetra blandit condimentum. Praesent mattis velit purus, at condimentum arcu pretium in.  Integer pharetra nulla suscipit ex sollicitudin, ac laoreet tellus egestas. In hac habitasse platea dictumst. Nunc rhoncus blandit rutrum. Proin eget luctus risus, nec accumsan mi. Maecenas congue, nisi vel dapibus sollicitudin, leo odio aliquet erat, eget tempus velit lorem eu nunc. Vestibulum sed turpis tristique, scelerisque ipsum ac, placerat elit. Vestibulum maximus aliquet ultrices. In eget elit ipsum. Nulla facilisi. Integer dapibus nibh nunc, vitae dignissim metus cursus sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar vel nisl at cursus. Nunc pharetra, quam ut iaculis varius, dui libero elementum velit, eget fermentum felis ante eget justo. Donec consectetur molestie est vitae rutrum."
+                android:layout_marginRight="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
