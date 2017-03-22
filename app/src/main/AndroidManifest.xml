@@ -3,6 +3,7 @@
     package="com.example.pro.watts_hut">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +11,10 @@
         android:label=""
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
+
+        </activity>
+        <activity android:name=".activities.MainActivityUsingFragment">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,11 +22,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MovieDetails"
+            android:name=".activities.MovieDetails"
             android:label="@string/title_activity_movie_details"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
-        </activity>
+        <activity android:name=".activities.MovieReviews"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

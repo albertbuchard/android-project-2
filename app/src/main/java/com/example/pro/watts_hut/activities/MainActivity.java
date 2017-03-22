@@ -1,22 +1,24 @@
-package com.example.pro.watts_hut;
+package com.example.pro.watts_hut.activities;
 
-import android.app.ActionBar;
 import android.content.Context;
+import android.content.res.Configuration;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.pro.watts_hut.R;
+import com.example.pro.watts_hut.adapters.MovieRvAdapter;
+import com.example.pro.watts_hut.data.FavoriteMoviesHelper;
+import com.example.pro.watts_hut.data.MovieObject;
 import com.squareup.picasso.Picasso;
 
 import org.apache.commons.lang3.ArrayUtils;
@@ -34,11 +36,16 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import static com.example.pro.watts_hut.data.FavoriteMoviesContract.*;
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     private Context mContext;
     private Toast internalToast;
+
+    // database
+    private SQLiteDatabase mDb;
 
     // Recycler view
     private MovieRvAdapter internalMovieAdapter;
@@ -50,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     private int currentSorting = R.string.movie_api_top_rate;
     private List<MovieObject> cachedDatasetPopular = new ArrayList<MovieObject>();
     private List<MovieObject> cachedDatasetToprated = new ArrayList<MovieObject>();
+    private List<MovieObject> cachedFavorites = new ArrayList<MovieObject>();
 
     // Keeps a separate page count for the two API endpoints
     private int currentPage; // Used in LoadMovies()
@@ -59,17 +67,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_no_fragment);
 
         mContext = getApplicationContext();
 
-
         // Setup recycler view
-        recyclerView = (RecyclerView) findViewById(R.id.rv_movie_grid) ;
+        recyclerView = (RecyclerView) findViewById(R.id.rv_movie_grid);
 
         // Set GridLayoutManager to the recyclerview, with two columns
-        GridLayoutManager layoutManager = new GridLayoutManager(this,2);
-        recyclerView.setLayoutManager(layoutManager);
+        //GridLayoutManager layoutManager = new GridLayoutManager(this,2);
+        //recyclerView.setLayoutManager(layoutManager);
+
+
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+            recyclerView.setLayoutManager(new GridLayoutManager(mContext, 2));
+        }
+        else{
+            recyclerView.setLayoutManager(new GridLayoutManager(mContext, 4));
+        }
 
         // Set the adapter to the recycler view
         internalMovieAdapter = new MovieRvAdapter(this, recyclerView);
@@ -81,6 +96,64 @@ public class MainActivity extends AppCompatActivity {
         });
         recyclerView.setAdapter(internalMovieAdapter);
 
+
+        // access the dababase
+        FavoriteMoviesHelper mDbHelper = FavoriteMoviesHelper.getHelper(mContext);
+        mDb = mDbHelper.getWritableDatabase();
+
+        refreshFavorites();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        refreshFavorites();
+    }
+
+    // cmd shift a
+    // ctrl o
+
+    public void refreshFavorites() {
+        Cursor cursor = getAllFavorite();
+        Log.i(TAG, "onCreate: " + cursor.getCount());
+
+        cachedFavorites = new ArrayList<MovieObject>();
+        while (cursor.moveToNext()) {
+            cachedFavorites.add(new MovieObject(this, cursor));
+        }
+    }
+
+
+    private Cursor getAllFavorite () {
+        String[] projection = {
+                favoriteMovies._ID,
+                favoriteMovies.COLUMN_MOVIE_DB_ID,
+                favoriteMovies.COLUMN_RELEASE_DATE,
+                favoriteMovies.COLUMN_MOVIE_TITLE,
+                favoriteMovies.COLUMN_THUMBNAIL,
+                favoriteMovies.COLUMN_IS_FAVORITE,
+                favoriteMovies.COLUMN_RATINGS,
+                favoriteMovies.COLUMN_VOTE_COUNT,
+                favoriteMovies.COLUMN_SYNOPSIS,
+
+        };
+
+        // Filter results WHERE "title" = 'My Title'
+        String selection = favoriteMovies.COLUMN_IS_FAVORITE + " = ?";
+        String[] selectionArgs = { "1" };
+
+        // How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                favoriteMovies.COLUMN_DATE_ADDED + " DESC";
+
+        return mDb.query(favoriteMovies.TABLE_NAME,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                sortOrder);
     }
 
     @Override
@@ -90,29 +163,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void goFullScreen() {
-        // Hide UI - Go Fullscreen - TODO Not used (yet?)
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-        ActionBar actionBar = getActionBar();
-        if (actionBar != null)
-            actionBar.hide();
-    }
-
-//    TODO maybe add this hiding of toolbar on scroll
-// private void hideViews() {
-//        mToolbar.animate().translationY(-mToolbar.getHeight()).setInterpolator(new AccelerateInterpolator(2));
-//
-//        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) mFabButton.getLayoutParams();
-//        int fabBottomMargin = lp.bottomMargin;
-//        mFabButton.animate().translationY(mFabButton.getHeight()+fabBottomMargin).setInterpolator(new AccelerateInterpolator(2)).start();
-//    }
-//
-//    private void showViews() {
-//        mToolbar.animate().translationY(0).setInterpolator(new DecelerateInterpolator(2));
-//        mFabButton.animate().translationY(0).setInterpolator(new DecelerateInterpolator(2)).start();
-//    }
 
     /**
      * Allows to use only one toast
@@ -143,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
             Context context = this;
             String message = "Refresh!";
             boast(Toast.makeText(context, message, Toast.LENGTH_LONG));
-
+            internalMovieAdapter.shouldLoad = true;
             if ( currentSorting == SORTING_POPULAR ) {
                 currentSorting = SORTING_TOP_RATED;
                 currentPagePopular = currentPage;
@@ -160,6 +210,25 @@ public class MainActivity extends AppCompatActivity {
             }
 
             loadMovies();
+        } else if ((menuItemId == R.id.action_show_favorite)&&(cachedFavorites.size() > 0)) {
+            if (currentSorting == SORTING_POPULAR) {
+                currentPagePopular = currentPage;
+                cachedDatasetPopular = internalMovieAdapter.swapDataset(cachedFavorites);
+                internalMovieAdapter.shouldLoad = false;
+            } else {
+                currentPageTopRated = currentPage;
+                cachedDatasetToprated = internalMovieAdapter.swapDataset(cachedFavorites);
+                internalMovieAdapter.shouldLoad = false;
+            }
+
+            // TODO set dataset to cached favorite if exists
+            // TODO start a query on background thread for db
+            // TODO once query is fetch compare each result to the cache data, add if new
+            // TODO refresh with new data.set
+            String message = "En attendant";
+
+            boast(Toast.makeText(this, message, Toast.LENGTH_SHORT));
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -308,76 +377,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * Holds the data of a movie from the JSONObject. Is also parcelable and sent between main activity and
-     * detail activity.
-     */
-    public static class MovieObject implements Parcelable {
-
-        public JSONObject data;
-        public ImageView cachedImage;
-        public String imageUrl = "null";
-        public String apiFormattedUrl = "null";
-
-        Context appContext = null;
-
-        public MovieObject(Context context, JSONObject jsonObject) {
-            data = jsonObject;
-            appContext = context;
-            try {
-                imageUrl = jsonObject.getString(appContext.getString(R.string.movie_api_results_image));
-                apiFormattedUrl = getThumbnailUrl();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        public static final Creator<MovieObject> CREATOR = new Creator<MovieObject>() {
-            @Override
-            public MovieObject createFromParcel(Parcel in) {
-                    return new MovieObject(in);
-            }
-
-            @Override
-            public MovieObject[] newArray(int size) {
-                return new MovieObject[size];
-            }
-        };
-
-        public String getThumbnailUrl() {
-            String url = apiFormattedUrl;
-            if (url != "null")
-                return url;
-
-            if ((imageUrl != "null")&&(appContext != null))
-                url = String.format(appContext.getString(R.string.image_api_url), "w185", imageUrl);
-
-            return url;
-        }
-
-        @Override
-        public int describeContents() {
-            return 0;
-        }
-
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            dest.writeString(this.data.toString());
-            dest.writeString(this.imageUrl);
-            dest.writeString(this.apiFormattedUrl);
-        }
-
-        public MovieObject(Parcel pc) {
-
-            try {
-                data = new JSONObject(pc.readString());
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            imageUrl =  pc.readString();
-            apiFormattedUrl = pc.readString();
-        }
-    }
 
 
 }

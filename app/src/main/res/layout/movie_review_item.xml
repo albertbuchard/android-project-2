@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+
+    <TextView
+        android:id="@+id/review_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:paddingEnd="24dp"
+        android:paddingStart="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/review_author"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_author"
+        tools:text="but also a rise in quality - debatable of course!\r\n\r\nHere for the third and final part of the trilogy, Leone adds Eli Wallach to the established pairing of Lee Van Cleef and Clint Eastwood, and brings all his tools of the trade to the party. Plot is slight, the three principals are on a collision course to find some buried gold, with each man having varying degrees of scuzziness, so how will it pan out?\r\n\r\nSuch is the genius of the narrative, it's a fascinating journey to undertake. The characterisations are ripe and considered, the various traits and peccadilloes beautifully enhanced, and with Leone being Leone, there's no shortage of cruelty and humour. He also brings his style, the close ups, long shots and some outstanding framing of characters in various situations.\r\n\r\nThe story encompasses The Civil War, which pitches our leads into \&quot;The Battle of Branston Bridge\&quot;, where here we get to see just how great Leone was at constructing full on battle sequences. It's exciting, thrilling and" />
+
+    <TextView
+        android:id="@+id/review_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="John Leary says:" />
+
+</android.support.constraint.ConstraintLayout>

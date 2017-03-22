@@ -2,6 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:title="Favorites"
+        android:icon="@drawable/ic_trophy_award"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        android:id="@+id/action_show_favorite"/>
+    <item
         android:title="Popular"
         android:orderInCategory="1"
         app:showAsAction="ifRoom"

@@ -5,4 +5,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="width_thumbnail">167dp</dimen>
     <dimen name="height_thumbnail">211dp</dimen>
+    <dimen name="title_size">334dp</dimen>
 </resources>

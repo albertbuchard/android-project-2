@@ -3,7 +3,10 @@
     <string name="image_api_url">http://image.tmdb.org/t/p/%1$s%2$s</string>
     <string name="movie_api_url">https://api.themoviedb.org/3/discover/movie</string>
     <string name="movie_api_popular">http://api.themoviedb.org/3/movie/popular</string>
+    <string name="movie_api_detail">http://api.themoviedb.org/3/movie/%1s?append_to_response=videos</string>
+    <string name="movie_api_reviews">http://api.themoviedb.org/3/movie/%1s/reviews</string>
     <string name="movie_api_top_rate">http://api.themoviedb.org/3/movie/top_rated</string>
+    <string name="youtube_video_url">http://www.youtube.com/watch?v=%1s</string>
     <string-array name="movie_api_sizes">
         <item>w185</item>
         <item>w92</item>
@@ -14,7 +17,7 @@
         <item>original</item>
     </string-array>
     <string name="Refresh">Refresh</string>
-    <string name="movie_api_key">62e02e921b592cff89545ffbf9442322</string>
+    <string name="movie_api_key"></string>
     <string name="movie_api_param_key">api_key</string>
     <string name="movie_api_param_sort">sort_by</string>
     <string name="movie_api_param_page">page</string>
@@ -39,4 +42,10 @@
         <item>vote_count.desc</item>
     </string-array>
     <string name="title_activity_movie_details">movieDetails</string>
+    <string name="empty">Select a movie</string>
+    <string name="reviews">Reviews</string>
+    <string name="ratings">Ratings</string>
+    <string name="release_date">Release date</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="trailer">Trailer</string>
 </resources>
